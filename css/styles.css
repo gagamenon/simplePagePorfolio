@@ -1,0 +1,242 @@
+/* General Styles */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #0f0f0f;
+	color: #cccccc;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	background:#25262c;
+	background-size: auto 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+a{
+	color: rgba(242, 135, 5,1);
+	text-decoration: none;
+	font-weight: 600;
+	transition: font-weight .2s ease-out
+	
+}
+a:hover{
+	font-weight: 900;
+
+}
+section,
+footer{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.about-container, 
+.skills-container,
+.contact-container{
+	margin: 0 10vw;
+	max-width: 1080px;
+}
+.skills-container,
+.project-container,
+.contact-container{
+	width: 80vw;
+}
+h2{
+	font-size: 5rem;
+	color: rgba(242, 135, 5,1); 
+	font-weight: 600;
+	line-height: 1.2;
+}
+h3{
+	font-size: 2rem;
+	font-weight: 600;
+	line-height: 1.3;
+	padding: 1em 0 0.5em;
+}
+
+/* Header */
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 2rem;
+	z-index: 100;
+}
+.header-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 6rem;
+}
+.logo-container{
+	max-width: 80px;
+
+}
+.logo-container img{}
+
+/* Main Navigation */
+nav ul{
+	display: flex;
+	justify-items: flex-end;
+	justify-content: flex-end;
+	gap: 2rem;
+	font-weight: 600;
+}
+
+nav ul li a{
+	font-weight: 800;
+	color: #ccc;
+	text-decoration: none;
+	padding: 1em 1.5em;
+	
+
+}
+nav ul li a:hover{
+	background: linear-gradient(90deg, rgba(242, 135, 5, 1) 85%, rgba(242, 135, 5,0) 85%);
+	color: #fff;
+	font-weight: 800;
+}
+nav ul li a:active{
+	background: linear-gradient(90deg, rgba(242, 135, 5,1) 35%, rgba(242, 135, 5,0) 35%);
+	color: #fff;
+	font-weight: 800;
+}
+
+/* Section About */
+#about{
+	background: radial-gradient(ellipse at center 40%, #3b3d41 0, rgba(28, 29, 33, 0) 70%);
+}
+#about h1{
+	font-size: 8rem;
+	line-height: 1.2;
+	text-align: center;
+	color: #eee;
+	
+}
+#about p{
+	text-transform: uppercase;
+}
+.about-hi{
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.about-hi p{
+	width: 18%;
+	font-size: 1.6rem;
+}
+.color-linebox{
+	background-color:rgba(242, 135, 5,1);
+	height: 4px;
+	width: 82%;
+}
+.about-prof{
+	color:rgba(242, 135, 5,1);
+	text-shadow: 4px 0 7px rgba(0, 0, 0, 0.5);
+	font-size:1.3rem;
+	font-weight: 500;
+	text-align: right;
+	padding-left: 60%;
+	line-height: 1.5rem;
+	letter-spacing: 1px;
+}
+
+/* Section Skills */
+#skills{}
+.skill-subtitle,
+.project-subtitle{
+	width: 25vw;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.skills{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 3rem 0;
+	gap: 2rem;
+}
+.skill-item {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 2rem;
+	box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+}
+.skill-item .logo{
+	width: 80px;
+	filter: invert(47%) sepia(94%) saturate(523%) hue-rotate(355deg) brightness(101%) contrast(102%);
+	
+}
+/* Section Projects */
+#projects{}
+.projects-list{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin: 3rem 0;
+	gap: 2rem;
+}
+.project-item{
+	overflow: hidden;
+}
+.project-item img{
+	width: 100%;
+}
+/* Footer */
+.contact-subtitle{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+.two-columns{
+	display: flex;
+	justify-content: space-between;
+	margin: 3rem 0;
+	gap: 2rem;
+	flex-basis: 400px;
+}
+footer form{
+	padding: 0 2rem;
+	
+}
+.form-container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+footer label{
+	display: inline-block;
+	margin: 1em 0 0.5em;
+}
+footer input{
+	background-color:rgba(255, 213, 163, 1); 
+	border: 2px solid rgba(242, 135, 5,1);
+	border-radius: 5px;
+	margin: 0.5rem 0 0 ;
+	width: 100%;
+}
+footer input[type=submit]{
+	background-color:rgba(242, 135, 5,1);
+	font-weight: 800;
+	color: #eee;
+	padding: 0.5em 1em;
+	width: 200px;
+	display: block;
+	margin: 2em 0 0 auto;
+}
+.copyright{
+	font-size: 0.7rem;
+	text-align: center;
+	padding: 1em;
+}
