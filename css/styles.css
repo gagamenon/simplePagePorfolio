@@ -112,12 +112,28 @@ nav ul li a {
 	color: #ccc;
 	text-decoration: none;
 	padding: 1em 1.5em;
+	position: relative;
 
 
 }
-
+nav ul li a:before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0%;
+height: 100%;
+background-color:rgba(242, 135, 5, 1);
+transition: all .3s;
+border-radius:0 0.5rem 0.5rem 0;
+z-index: -1;}
+nav ul li a:hover:before{
+	width:85%;
+}
+nav ul li a.active:before{
+	width:35%;
+}
 nav ul li a:hover {
-	background: linear-gradient(90deg, rgba(242, 135, 5, 1) 85%, rgba(242, 135, 5, 0) 85%);
 	color: #fff;
 	font-weight: 800;
 }
